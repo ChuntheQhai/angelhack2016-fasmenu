@@ -1,0 +1,121 @@
+<header style="background-color:#d80808" class="bar bar-header bar-balanced">
+        <h1 class="title">Main Menu</h1>
+</header>
+
+<ion-view title="Ads" ng-controller="MenuCtrl as vm">
+  <ion-content class="has-header" style="background-color:#e7e7e7">
+
+  	<div class="item" style="margin-bottom:25px">
+ 		<div style="display:inline-block;">
+	 		<h2>Total Payable Amount</h2>
+			<p>Total payment</p> 
+		</div>
+		<span style="float:right;display:inline-block;margin-top:10px;margin-right:15px;font-size:20px">{{ item1*5 + item2*3 + item3*2 + item4*2 | currency:"RM" }}</span> {{ totalitem1 }}
+		<!-- RM <input value="{{totalitem1}}" style="float:right;display:inline-block;margin-top:10px;margin-right:15px;font-size:20px"/> -->
+
+
+	</div>
+
+	 <ul class="list">
+	 	<div class="item" style=""><i class="ion-fork"></i><i class="ion-spoon"></i> Foods</div>
+	    <li class="item item-avatar">
+			<img class="col-20" style="display:inline-block" src="img/nasi lemak 50.jpg">
+			<div class="col-75" style="display:inline-block">
+				<h2>Nasi Lemak</h2>
+				<p>Malaysian Typical Food</p> 
+				<p style="font-size:17px">RM 5</p>
+			</div>
+
+			<span class="item-note col-33" style="text-align:right;display:inline-block"><i class="ion-ios-arrow-down"></i>
+				<p style="text-align:center">Qty</p>
+				<input ng-model="item1" type="text" style="width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #e9e9e9;" value="0" ng-init="item1=0">
+				<!-- <input ng-model="titem1" type="text" value="{{(item1*5)}}"/> -->
+			</span>
+			
+	    </li>
+
+	   	<li class="item item-avatar">
+			<img class="col-20" style="display:inline-block" src="img/mee goreng 50.jpg">
+
+			<div class="col-75" style="display:inline-block">
+				<h2>Mee Goreng</h2>
+				<p>Malaysian Typical Food</p> 
+				
+				<p style="font-size:17px">RM 3</p>
+			</div>
+
+			<span class="item-note col-33" style="text-align:right"><i class="ion-ios-arrow-down"></i>
+				<p style="text-align:center">Qty</p>
+				<input ng-model="item2" type="text" style="width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #e9e9e9;" value="0" ng-init="item2=0">
+				<input ng-model="totalitem2" style="display:none" value="{{(item2*3)}}"/>
+			</span>
+
+
+			
+	    </li>
+	    
+
+	   	<div class="item"><i class="ion-coffee"></i> Beverages</div>
+	    <li class="item item-avatar">
+			<img class="col-20" src="img/teh tarik 50.jpg">
+
+			<div class="col-75" style="display:inline-block">
+				<h2>Teh Tarik</h2>
+				<p>Malaysian Typical Drink</p> 
+				
+				<p style="font-size:17px">RM 2</p>
+			</div>
+
+			<span class="item-note col-33" style="text-align:right"><i class="ion-ios-arrow-down"></i>
+				<p style="text-align:center">Qty</p>
+				<input ng-model="item3" type="text" style="width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #e9e9e9;" value="0" ng-init="item3=0">
+			</span>
+
+
+	    </li>
+
+	     <li class="item item-avatar" style="margin-bottom:25px">
+			<img style="col-20" src="img/milo ice 50.jpg">
+
+			
+			<div class="col-75" style="display:inline-block">
+				<h2>Milo Ice</h2>
+				<p>Malaysian Typical Drink</p> 
+				
+				<p style="font-size:17px">RM 2</p>
+			</div>
+
+			<span class="item-note col-33" style="text-align:right"><i class="ion-ios-arrow-down"></i>
+				<p style="text-align:center">Qty</p>
+				<input ng-model="item4" type="text" style="width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #e9e9e9;" value="0" ng-init="item4=0">
+			</span>
+
+			
+	    </li>
+	</ul>
+
+	</ion-content>
+<!-- 	<div id="molpay" class="molpay"></div>
+ -->
+	<button class="bar bar-footer bar-assertive" style="background-color: #823081;
+    border-color: #823081;">
+	  <div class="title">Pay</div>
+	</button>
+	
+</ion-view>

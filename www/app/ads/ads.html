@@ -1,0 +1,27 @@
+
+
+<header style="background-color:#d80808" class="bar bar-header bar-balanced">
+        <h1 class="title"><img style="height:43px;" src="img/fasmenu logo_small.png"></h1>
+	  
+  </header>
+
+
+
+<ion-view title="Ads" ng-controller="AdsCtrl as vm">
+  <ion-content class="has-header">
+          
+		
+		<div style="text-align:center">
+			<img style="width:90%;height:90%; margin-top:30px;" src="img/adv-1_a.jpg">
+		</div>
+	    
+		<div style="text-align:center; margin-top:20px">
+			<p style="font-size:16px;">
+				<timer countdown="5" interval="1000" finish-callback="vm.finished()">Ad will dismiss in ... {{seconds}} seconds</timer>
+			</p>
+		</div>		
+			
+
+	       
+  </ion-content>
+</ion-view>
