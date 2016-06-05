@@ -1,4 +1,4 @@
-angular.module("eliteApp", ["ngCordova","ionic","timer"])
+angular.module("eliteApp", ["ngCordova","ionic","timer","chart.js"])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -50,6 +50,24 @@ angular.module("eliteApp", ["ngCordova","ionic","timer"])
             "mainContent":{
                 templateUrl: "app/menu/menu.html"
             }
+        }
+    })
+
+    .state('app.payment',{
+        url: "/payment",
+        views: {
+          "mainContent":{
+            templateUrl: "app/payment/payment.html"
+          }
+        }
+    })
+
+    .state('app.confirm-order',{
+      url: "/confirm-order",
+       views: {
+          "mainContent":{
+            templateUrl: "app/confirm-order/confirm-order.html"
+          }
         }
     });
 

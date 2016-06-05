@@ -28,6 +28,15 @@
           $state.go("app.ads");
         }
 
+        vm.graph = {};
+        vm.graph.data = [
+          //Awake
+          [60, 9.60, 20.30, 10.50, 20.90, 15.30]
+        ];
+        
+        vm.graph.labels = ['5/21', '5/25', '5/28', '5/31', '6/1', '6/3'];
+
+
 
 
         // vm.lookup = function () {

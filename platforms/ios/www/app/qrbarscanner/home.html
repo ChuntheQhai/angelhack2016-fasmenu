@@ -2,14 +2,19 @@
   
   <header style="background-color:#d80808" class="bar bar-header bar-balanced">
         <h1 class="title"><img style="height:43px;" src="img/fasmenu logo_small.png"></h1>
-    <button class="button" style="border:0px;background-color:#d80808" ng-click="vm.scan()">
-    <i class="ion-camera" style="font-size:30px; background-color:#d80808"></i>
-    </button>
+        <button class="button" style="border:0px;background-color:#d80808" ng-click="vm.scan()">
+        <i class="ion-camera" style="font-size:30px; background-color:#d80808"></i>
+        </button>
   </header>
 
   <ion-view title="Teams">
     <ion-content class="has-header" style="background-color:#e7e7e7">
       <!--<button class="button button-balanced" ng-click="vm.showAds()">Show Ads</button>-->
+
+    <div class="item">
+      <h2 style="text-align:center">Overall Transaction</h2>
+      <canvas id="bar" class="chart chart-line" data="vm.graph.data" labels="vm.graph.labels" series='vm.graph.series' height="150"></canvas>
+    </div>
     <div class="item" style="border:none;">
           <i class="ion-ios-timer-outline"></i> Transaction History
     </div>
